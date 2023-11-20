@@ -1,0 +1,82 @@
+.card {
+  width: 25vw;
+  height: 25vw;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 2em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &__name {
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
+    border-bottom: 0.5px solid rgb(73, 73, 73);
+  }
+}
+
+.btns {
+  height: 50%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+
+  &__edit {
+    color: #5dc1f2;
+
+    &:hover ~ .edit__hover {
+      color: #5dc1f2;
+      direction: ltr;
+      transform: translateX(-70px);
+    }
+  }
+
+  &__remove {
+    color: red;
+
+    &:hover ~ .remove__hover {
+      color: red;
+      transform: translateX(0);
+      direction: ltr;
+    }
+  }
+}
+
+.edit__hover {
+  transform: translateX(0);
+}
+
+.remove__hover {
+  transform: translateX(-50px);
+}
+
+.hover__effect {
+  padding: 0.7em 0.3em;
+  display: inline-block;
+  width: 0;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.2em;
+  padding: 0.5em;
+}
+
+.split {
+  padding-bottom: 0.7em;
+}
