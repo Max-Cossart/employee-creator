@@ -1,27 +1,16 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin: 1em 0;
+  padding: 1em 1em;
 }
 
 .label {
   margin-bottom: 0.5em;
 }
 
-.basic_input {
+.select {
+  width: 10em;
   font-size: 1em;
   padding: 0.5em;
   border-radius: 0.5em;
-}
-
-.input {
-  max-width: 18em;
-}
-
-.large {
-  max-width: 24em;
-}
-
-.small {
-  max-width: 6em;
 }

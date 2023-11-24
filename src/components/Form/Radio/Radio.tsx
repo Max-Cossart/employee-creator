@@ -7,7 +7,7 @@ interface Props {
 
 const Radio = ({ name, label }: Props) => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.container}>
       <input type="radio" className={styles.radio} />
       <label htmlFor={name} className={styles.label}>
         {label}

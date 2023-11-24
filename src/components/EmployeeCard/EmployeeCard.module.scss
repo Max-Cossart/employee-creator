@@ -1,8 +1,8 @@
 .card {
   width: 25vw;
   height: 25vw;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 20em;
+  max-height: 20em;
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 2em;
@@ -17,12 +17,17 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
   &__name {
     text-align: center;
     font-size: 1.5em;
     width: 100%;
     border-bottom: 0.5px solid rgb(73, 73, 73);
   }
+}
+
+.link {
+  width: 100%;
 }
 
 .btns {
@@ -33,6 +38,7 @@
 
   &__edit {
     color: #5dc1f2;
+    cursor: pointer;
 
     &:hover ~ .edit__hover {
       color: #5dc1f2;
@@ -43,6 +49,7 @@
 
   &__remove {
     color: red;
+    cursor: pointer;
 
     &:hover ~ .remove__hover {
       color: red;

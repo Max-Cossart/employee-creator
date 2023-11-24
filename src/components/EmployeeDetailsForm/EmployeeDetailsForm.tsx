@@ -1,6 +1,8 @@
 import Text from "../Form/InputText/Text";
 import Radio from "../Form/Radio/Radio";
+import Select from "../Form/Select/Select";
 import styles from "./EmployeeDetailsForm.module.scss";
+import months from "../../data/months.json";
 
 function EmployeeDetailsForm() {
   return (
@@ -21,37 +23,34 @@ function EmployeeDetailsForm() {
         <div className={styles.container}>
           <h3 className={styles.title}>Employee Status</h3>
           <div>
-            <h4>What is the contract type?</h4>
+            <h4 className={styles.sub_title}>What is the contract type?</h4>
             <Radio name="permanent" label="Permanent" />
             <Radio name="contract" label="Contract" />
           </div>
-          <div className={`${styles.container} ${styles.date}`}>
-            <h4>Start Date</h4>
-            <div>
+          <div className={`${styles.container} ${styles.date_container}`}>
+            <h4 className={styles.sub_title}>Start Date</h4>
+            <div className={styles.date}>
               <Text name="startDay" label="Day" />
-              <select name="" id="">
-                <option value="">months</option>
-              </select>
+              <Select name="month" label="Month" values={months} />
               <Text name="startYear" label="Year" />
             </div>
           </div>
-          <div className={`${styles.container} ${styles.date}`}>
-            <h4>Finish Date</h4>
-            <div>
+          <div className={`${styles.container} ${styles.date_container}`}>
+            <h4 className={styles.sub_title}>Finish Date</h4>
+            <div className={styles.date}>
               <Text name="finishDay" label="Day" />
-              <select name="" id="">
-                <option value="">months</option>
-              </select>
+              <Select name="month" label="Month" values={months} />
               <Text name="finishYear" label="Year" />
             </div>
-          </div>
-          <div>
             <Radio name="onGoing" label="On Going" />
           </div>
           <div className={styles.container}>
-            <h4>Is this on a full-time or part-time basis?</h4>
+            <h4 className={styles.sub_title}>
+              Is this on a full-time or part-time basis?
+            </h4>
             <Radio name="fullTime" label="Full-Time" />
             <Radio name="partTime" label="Part-Time" />
+            <br />
             <Text name="hoursPerWeek" label="Hours Per Week" />
           </div>
         </div>

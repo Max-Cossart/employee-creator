@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import styles from "./EmployeeCard.module.scss";
+import { NavLink } from "react-router-dom";
 
 const EmployeeCard = () => {
   const employee = {
@@ -20,7 +21,9 @@ const EmployeeCard = () => {
   return (
     <section className={styles.card}>
       <div className={styles.info}>
-        <h3 className={styles.info__name}>{employee.name}</h3>
+        <NavLink to={"/thing"}>
+          <h3 className={styles.info__name}>{employee.name}</h3>
+        </NavLink>
         <p className={styles.info__contract}>
           Contract - {employee.contractLength}yrs
         </p>
