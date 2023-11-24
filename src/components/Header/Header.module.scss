@@ -1,16 +1,16 @@
 .wrapper {
   height: 20vh;
   background-color: lightgray;
-  padding-left: 10vw;
   display: flex;
   flex-direction: column;
+  padding-left: 3em;
 }
 
 .home__wrapper {
   height: 20vh;
   background-color: lightgray;
-  padding-left: 10vw;
   display: flex;
+  padding-left: 3em;
   justify-content: center;
   flex-direction: column;
 }

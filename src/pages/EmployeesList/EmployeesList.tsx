@@ -1,3 +1,4 @@
+import { User } from "../../App";
 import EmployeeCard from "../../components/EmployeeCard/EmployeeCard";
 import Header from "../../components/Header/Header";
 import styles from "./EmployeesList.module.scss";
@@ -8,14 +9,9 @@ const EmployeeList = () => {
     <>
       <Header title={"Employee's List"} />
       <div className={styles.wrapper}>
-        <NavLink to={"/thing"} style={{ textDecoration: "none" }}>
+        <NavLink to={"/thing"}>
           <EmployeeCard />
         </NavLink>
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
-        <EmployeeCard />
       </div>
     </>
   );

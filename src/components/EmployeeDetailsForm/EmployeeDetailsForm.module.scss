@@ -1,0 +1,30 @@
+.wrapper {
+  margin: 3em;
+}
+
+.container {
+  margin: 3em 0;
+}
+
+.title {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  width: 13em;
+  padding: 1em;
+  font-size: 1em;
+  margin-right: 2em;
+  border-radius: 0.5em;
+}
+
+.save_btn {
+  background-color: rgba(5, 5, 104, 0.89);
+  color: white;
+}

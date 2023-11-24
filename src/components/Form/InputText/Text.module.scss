@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+.label {
+  margin-bottom: 0.5em;
+}
+
+.basic_input {
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.input {
+  max-width: 300px;
+}
+
+.large {
+  max-width: 400px;
+}
+
+.small {
+  max-width: 100px;
+}
