@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3em;
+  margin: 0 5em;
+  border-bottom: 0.5px solid black;
+}
+
+.para {
+  font-size: 1.6em;
+  font-weight: 100;
+}
+
+.divider {
+  padding: 0 1em;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.btn {
+  width: 13em;
+  padding: 1em;
+  font-size: 1em;
+  margin-right: 2em;
+  border-radius: 0.5em;
+  background-color: rgba(5, 5, 104, 0.89);
+  color: white;
+  cursor: pointer;
+}
