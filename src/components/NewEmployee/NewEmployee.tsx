@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./NewEmployee.module.scss";
 
 const NewEmployee = () => {
@@ -11,9 +12,7 @@ const NewEmployee = () => {
         Click Edit to see more details about each employee
       </p>
       <span className={styles.divider}>|</span>
-      <button className={styles.btn} onClick={addEmployee}>
-        Add Employee
-      </button>
+      <NavLink className={styles.btn}>Add Employee</NavLink>
     </div>
   );
 };

@@ -2,14 +2,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrashCan } from "@fortawesome/free-regular-svg-icons";
 import styles from "./EmployeeCard.module.scss";
 import { NavLink } from "react-router-dom";
+import { CardDetails } from "../../pages/EmployeesList/EmployeesList";
 
-const EmployeeCard = () => {
-  const employee = {
-    name: "John Smith",
-    contractLength: 5,
-    email: "john.smith@email.com",
-  };
-
+const EmployeeCard = ({
+  firstName,
+  lastName,
+  startDate,
+  email,
+  id,
+}: CardDetails) => {
   const removeEmployee = () => {
     console.log("delete");
   };
@@ -21,13 +22,15 @@ const EmployeeCard = () => {
   return (
     <section className={styles.card}>
       <div className={styles.info}>
-        <NavLink to={"/thing"}>
-          <h3 className={styles.info__name}>{employee.name}</h3>
+        <NavLink to={"/thing"} className={styles.link}>
+          <h3 className={styles.info__name}>
+            {firstName} {lastName}
+          </h3>
         </NavLink>
-        <p className={styles.info__contract}>
-          Contract - {employee.contractLength}yrs
+        <p className={styles.info__start}>
+          {startDate.toString().slice(0, 10).split("-").reverse().join("-")}
         </p>
-        <p>{employee.email}</p>
+        <p>{email}</p>
       </div>
       <div className={styles.btns}>
         <button

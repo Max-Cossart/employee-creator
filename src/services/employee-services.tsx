@@ -1,7 +1,5 @@
-export const employee = {
-  firstName: "John",
-  lastName: "Smith",
-  email: "test@test.com",
-  mobile: "0412 345 678",
-  address: "42 Wallaby Way, Sydney",
+export const getEmployees = async () => {
+  const response = await fetch("http://localhost:8080/employees");
+  const data = await response.json();
+  return data;
 };
