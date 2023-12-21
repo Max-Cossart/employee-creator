@@ -1,17 +1,19 @@
 import styles from "./Text.module.scss";
 
-interface Props {
+interface InputTextProps {
   name: string;
   label: string;
+  register: any;
 }
 
-const Text = ({ name, label }: Props) => {
+const Text = ({ name, label, register }: InputTextProps) => {
   return (
     <div className={styles.container}>
       <label htmlFor={name} className={styles.label}>
         {label}
       </label>
       <input
+        {...register(name)}
         type="text"
         id={name}
         className={`${

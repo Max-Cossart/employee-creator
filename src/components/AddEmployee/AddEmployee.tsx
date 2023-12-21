@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import styles from "./NewEmployee.module.scss";
+import styles from "./AddEmployee.module.scss";
 
-const NewEmployee = () => {
+const AddEmployee = () => {
   const addEmployee = () => {
     console.log("Add Employee");
   };
@@ -12,9 +12,11 @@ const NewEmployee = () => {
         Click Edit to see more details about each employee
       </p>
       <span className={styles.divider}>|</span>
-      <NavLink className={styles.btn}>Add Employee</NavLink>
+      <NavLink to="/new" className={styles.btn}>
+        Add Employee
+      </NavLink>
     </div>
   );
 };
 
-export default NewEmployee;
+export default AddEmployee;

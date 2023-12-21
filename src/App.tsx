@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import EmployeeInfo from "./pages/EmployeeInfo/EmployeeInfo";
 import EmployeeList from "./pages/EmployeesList/EmployeesList";
+import NewEmployee from "./pages/NewEmployee/NewEmployee";
 
 export interface Employee {
   id: number;
@@ -24,7 +25,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<EmployeeList />} />
-          <Route path="/thing" element={<EmployeeInfo />} />
+          <Route path="/:id" element={<EmployeeInfo />} />
+          <Route path="new" element={<NewEmployee />} />
         </Routes>
       </BrowserRouter>
     </>

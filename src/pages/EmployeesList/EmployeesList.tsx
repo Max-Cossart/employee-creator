@@ -1,6 +1,6 @@
 import EmployeeCard from "../../components/EmployeeCard/EmployeeCard";
 import Header from "../../components/Header/Header";
-import NewEmployee from "../../components/NewEmployee/NewEmployee";
+import AddEmployee from "../../components/AddEmployee/AddEmployee";
 import styles from "./EmployeesList.module.scss";
 import { getEmployees } from "../../services/employee-services";
 import { useEffect, useState } from "react";
@@ -20,16 +20,16 @@ const EmployeeList = () => {
     getEmployees().then((res) => {
       setEmployees(res);
     });
-    console.log(employees);
   }, []);
 
   return (
     <>
       <Header title={"Employee's List"} />
-      <NewEmployee />
+      <AddEmployee />
       <div className={styles.wrapper}>
         {employees.map((item) => (
           <EmployeeCard
+            key={item.id}
             firstName={item.firstName}
             lastName={item.lastName}
             startDate={item.startDate}
